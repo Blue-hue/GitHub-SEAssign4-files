@@ -31,15 +31,15 @@ void add_learner()
 
     int sum = 0;
     int i = 0;
-    printf("Enter marks of Calculus: ");
+    printf("Enter marks of Computer Networks: ");
     scanf("%d", &student.marks1);
-    printf("Enter marks of Computer Programming: ");
+    printf("Enter marks of OOS: ");
     scanf("%d", &student.marks2);
-    printf("Enter marks of Physics: ");
+    printf("Enter marks of Software Engineering: ");
     scanf("%d", &student.marks3);
-    printf("Enter marks of Chemistry: ");
+    printf("Enter marks of Graph Theory: ");
     scanf("%d", &student.marks4);
-    printf("Enter marks of Biology: ");
+    printf("Enter marks of Graphics & Geometric Modelling: ");
     scanf("%d", &student.marks5);
     student.total_marks = student.marks1 + student.marks2 + student.marks3 + student.marks4 + student.marks5;
 
@@ -67,15 +67,15 @@ void update_marks()
             printf("Enter the new set of marks\n");
             int i = 0;
             student.total_marks = 0;
-            printf("Enter marks of Calculus: ");
+            printf("Enter marks of Computer Networks: ");
             scanf("%d", &student.marks1);
-            printf("Enter marks of Computer Programming: ");
+            printf("Enter marks of OOS: ");
             scanf("%d", &student.marks2);
-            printf("Enter marks of Physics: ");
+            printf("Enter marks of Software Engineering: ");
             scanf("%d", &student.marks3);
-            printf("Enter marks of Chemistry: ");
+            printf("Enter marks of Graph Theory: ");
             scanf("%d", &student.marks4);
-            printf("Enter marks of Biology: ");
+            printf("Enter marks of Graphics & Geometric Modelling: ");
             scanf("%d", &student.marks5);
             student.total_marks = student.marks1 + student.marks2 + student.marks3 + student.marks4 + student.marks5;
 
@@ -100,8 +100,8 @@ void display_learners()
 {
     system("cls");
     printf("\n---Learner Details----\n");
-    printf("%-10s %-30s %-20s %-20s %-20s %-20s %-20s %-20s\n", "Roll No", "Name",
-           "Calculus", "Computer Programming", "Physics", "Chemistry", "Biology", "Total Marks");
+    printf("%-10s %-30s %-25s %-15s %-25s %-20s %-20s %-20s\n", "Roll No", "Name",
+           "Computer Networks", "OOS", "Software Engg", "Graph Theory", "Graphics", "Total Marks");
 
     file_pointer = fopen("learner.txt", "rb");
     while (fread(&student, sizeof(student), 1, file_pointer) == 1)
